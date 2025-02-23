@@ -1,0 +1,84 @@
+body {
+    background: url('homeback.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    height: 400px;
+    color: white;
+    text-align: center;
+
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    background: linear-gradient(45deg, #910000, #ff4d4d);
+    padding: 15px 40px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+    border: 2px solid white;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+}
+
+.cta-button::after {
+    content: ">>";
+    position: absolute;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+.cta-button:hover::after {
+    opacity: 1;
+    right: 15px;
+}
+
+
+.typewriter-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 4s steps(60, end), blink-caret 0.8s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+h1 {
+    font-size: 5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-decoration: hotpink;
+}

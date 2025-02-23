@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE LEGENDARY HUB</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+
+        const text = "The Legendary Hub ";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+
+            <h1 class="top">
+                <span class="typewriter-text" id="typewriter"></span>
+            </h1>
+
+        <div class="button-container">
+            <a href="register.html" class="cta-button">HERE YOU GO >></a></button>
+        </div>
+    </div>
+</body>
+</html>

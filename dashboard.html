@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Legendary Hub</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Birthstone&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" 
+    rel="stylesheet">
+  <!-- Your Dashboard CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Friend's Slider & Catchphrase CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Friend's Playbook CSS -->
+  <link rel="stylesheet" href="playbookstyle.css" />
+</head>
+<body>
+<!-- Navigation Bar -->
+<header>
+  <nav>
+    <img src="logo.png" alt="Logo" />
+    <h1><span class="toptext">How I Met Your Mother</span></h1>
+    <ul>
+      <li><a href="#home" class="special">Home</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#playbook">Barney’s Playbook</a></li>
+      <li><a href="#singalong">Robin Sparkles</a></li>
+      <li><a href="#" id="logoutNav" class="special">Log Out</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Dashboard Card -->
+<h2 class="section-title">🏠 Welcome to Your Legendary Dashboard</h2>
+<div class="auth-card">
+  <div class="auth-image">
+    <img src="Designer (6).jpeg" alt="Illustration" />
+  </div>
+  <div class="auth-content">
+    <div id="dashboardSection" style="display: block;">
+      <h2 id="welcomeMessage">Welcome to your dashboard!</h2>
+    </div>
+  </div>
+</div>
+
+<!-- Friend's Slider Section -->
+<h2 class="section-title">🌟 Meet the Gang</h2>
+<div class="guneev">
+  <div class="slider-container">
+    <button class="arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slides-wrapper">
+      <div class="slide">
+        <a href="characters/ted.html" class="character">
+          <div class="imageofcharacter" style="background-image: url('images/ted2.PNG');"></div>
+          <div class="textofcharacter">Ted Mosby</div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="characters/robin.html" class="character">
+          <div class="imageofcharacter" style="background-image: url('images/robin2.PNG');"></div>
+          <div class="textofcharacter">Robin Scherbatsky</div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="characters/barney.html" class="character">
+          <div class="imageofcharacter" style="background-image: url('images/barney2.PNG');"></div>
+          <div class="textofcharacter">Barney Stinson</div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="characters/lily.html" class="character">
+          <div class="imageofcharacter" style="background-image: url('images/liy2.PNG');"></div>
+          <div class="textofcharacter">Lily Aldrin</div>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="characters/marshall.html" class="character">
+          <div class="imageofcharacter" style="background-image: url('images/marshall2.PNG');"></div>
+          <div class="textofcharacter">Marshall Eriksen</div>
+        </a>
+      </div>
+    </div>
+    <button class="arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- Third Friend's Catchphrase Generator Section -->
+<!-- Catchphrase Generator Section -->
+<!-- Catchphrase Generator Section -->
+<h2 class="section-title">🎤 Legendary Catchphrase Generator</h2>
+<div class="catchphrase-section">
+  <!-- Left Column: Catchphrase Generator -->
+  <div class="catchphrase-left">
+    <div class="catchphrase-container">
+      <h1>HIMYM Catchphrase Generator</h1>
+      <div id="phrase">Click the button to generate a legendary catchphrase!</div>
+      <button class="btn" onclick="generatePhrase()">Generate</button>
+    </div>
+  </div>
+  <!-- Right Column: Descriptive Text -->
+  <div class="catchphrase-right">
+    <p>
+      Inject some legendary wit into your day! Use our catchphrase generator to surprise your friends and become the ultimate storyteller in true HIMYM style.
+    </p>
+  </div>
+</div>
+
+<!-- Playbook Section -->
+<h2 class="section-title">📖 The Bro Code: Barney’s Playbook</h2>
+<div class="playbook-section">
+  <!-- Left Column: Descriptive Text -->
+  <div class="playbook-left">
+    <p>
+      Unlock the secrets of success with Barney's Playbook. Discover legendary strategies to conquer life's challenges, impress your peers, and elevate your game.
+    </p>
+  </div>
+  <!-- Right Column: Playbook Content -->
+  <div class="playbook-right">
+    <div class="playbook-container" id="playbook">
+      <h1>Barney’s Playbook</h1>
+      <div class="slider">
+        <button class="nav-btn left">◀</button>
+        <div class="play-wrapper">
+          <h2 id="play-title">Loading...</h2>
+          <p id="play-description">Please wait...</p>
+        </div>
+        <button class="nav-btn right">▶</button>
+      </div>
+      <a class="back-link" href="../register.html">← Back to Profiles</a>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 The Legendary Hub. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script src="friend-script.js"></script>
+<script src="friend-catchphrase.js"></script>
+<script src="playbookscript.js"></script>
+<script>
+  document.getElementById("logoutNav").addEventListener("click", function () {
+    sessionStorage.removeItem("loggedInUser");
+    window.location.href = "register.html"; 
+  });
+</script>
+
+
+</body>
+</html>

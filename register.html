@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Legendary Hub - Login & Register</title>
+  
+  <!-- Boxicons for social icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="formstyle.css">
+  
+  <!-- New Form Styling CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Registration (Sign Up) Form -->
+    <div class="form-container sign-up">
+      <form id="registerForm">
+        <h1 style="color: black;">Create Account</h1>
+        <div class="social-icons">
+          <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <span>Register with E-mail</span>
+        <!-- Original Registration Fields -->
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <select id="character" required>
+          <option value="">Choose your favorite character</option>
+          <option value="Barney">Barney</option>
+          <option value="Ted">Ted</option>
+          <option value="Robin">Robin</option>
+          <option value="Marshall">Marshall</option>
+          <option value="Lily">Lily</option>
+        </select>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Login (Sign In) Form -->
+    <div class="form-container sign-in">
+      <form id="loginForm">
+        <h1 style="color: black;" > Sign In</h1>
+        <div class="social-icons">
+          <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+          <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <span>Login With Username & Password</span>
+        <!-- Original Login Fields (using username) -->
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <a href="#">Forget Password?</a>
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+
+    <!-- Toggle Panels -->
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome To <br>Your Dashboard</h1>
+          <p>Already have an account?</p>
+          <button class="hidden" id="login">Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Hello, New User!</h1>
+          <p>Join us and enjoy the legendary experience.</p>
+          <button class="hidden" id="register">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
